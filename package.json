@@ -1,7 +1,7 @@
 {
     "name" : "static-here",
-    "version" : "0.1",
-    "description" : "Serve files from the current directory.",
+    "version" : "0.1.0",
+    "description" : "A command-line tool for creating a static file server from the current working directory.",
     "main" : "./index.js",
     "keywords" : [
         "static",
