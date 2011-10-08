@@ -20,9 +20,9 @@ Create a static web server from the current directory.
   2. coffee-script: If you are the coffee-script kind of person, this will make  
       your life easier by optionally watch & (re)-compile `.coffee` files.  
   
-    ```npm install -g coffee-script
-       static-here coffee
-       Serving files from /badass/javascript/project at http://localhost:8888/```
+    ``` npm install -g coffee-script
+        static-here coffee
+        Serving files from /badass/javascript/project at http://localhost:8888/```
     
 ###Options:
 
