@@ -34,8 +34,9 @@ Create a static web server from the current directory.
   On my Mac, node's `fs.watchFile` is really slow with the default 0ms interval.  
   With An additional option flag `fix` this can be fixed (making the interval to -1).  
   
-  Defaults:  
-  * Port: 8888
-  * IP: 0.0.0.0
-  * coffee watching is off by default
+  Defaults:
+  
+    * Port: 8888
+    * IP: 0.0.0.0
+    * coffee watching is off by default
   
