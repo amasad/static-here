@@ -65,7 +65,7 @@ var httpCb = function (req, res) {
   var uri = url.parse(req.url).pathname,
       filename = path.join(process.cwd(), uri);
 
-  path.exists(filename, function (exists) {
+  fs.exists(filename, function (exists) {
     if (!exists) {
       httpRespond(res, 404, "Page Not Found!\n");
       return;
