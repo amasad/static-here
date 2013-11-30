@@ -2,9 +2,7 @@ var fs = require('fs'),
     http = require('http'),
     path = require('path'),
     url = require('url'),
-    EventEmitter = require('events').EventEmitter,
-    exec = require('child_process').exec,
-    spawn = require('child_process').spawn;
+    exec = require('child_process').exec;
 
 var args = {},
     argv = process.argv.slice(2);
@@ -48,7 +46,7 @@ try {
         if (ext[0] === '.') ext = ext.slice(1);
         return CONTENT_TYPES[ext] || 'application/octec-stream';
       }
-    }
+    };
   })();
 }
 
@@ -94,7 +92,7 @@ var httpCb = function (req, res) {
       res.write(file, 'binary');
       res.end();
     });
-  }); 
+  });
 };
 
 // Assign defaults and define the start server action.
@@ -158,4 +156,3 @@ var startWatching = function (files) {
 
 // The coffee feature will take care of starting the server.
 if (!args.coffee) startServer();
-
