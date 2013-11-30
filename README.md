@@ -5,11 +5,11 @@ Create a static web server from the current directory.
 ### Install
 
     npm install static-here
-  
-### Run static-here to start serving files from the current working directory.  
 
-    static-here
-      > Serving files from /badass/javascript/project at http://localhost:8888/
+### Run
+
+  static-here
+    > Serving files from /badass/javascript/project at http://localhost:8888/
     
 ### Options:
 
