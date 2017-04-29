@@ -1,12 +1,11 @@
-var fs = require('fs'),
-    http = require('http'),
-    path = require('path'),
-    url = require('url'),
-    exec = require('child_process').exec,
-    mime = require('mime');
-
-var args = {},
-    argv = process.argv.slice(2);
+var fs = require('fs');
+var http = require('http');
+var path = require('path');
+var url = require('url');
+var exec = require('child_process').exec;
+var mime = require('mime');
+var args = {};
+var argv = process.argv.slice(2);
 
 // Guess arguments.
 for (var i = 0; i < argv.length; i++){
@@ -27,11 +26,11 @@ function httpRespond(res, code, txt, headers) {
   res.end(txt);
 }
 
-var httpCb = function (req, res) {
-  var uri = url.parse(req.url).pathname,
-      filename = path.join(process.cwd(), uri);
+var httpCb = (req, res) => {
+  var uri = url.parse(req.url).pathname;
+  var filename = path.join(process.cwd(), uri);
 
-  fs.exists(filename, function (exists) {
+  fs.exists(filename, exists => {
     if (!exists) {
       httpRespond(res, 404, "Page Not Found!\n");
       return;
@@ -50,7 +49,7 @@ var httpCb = function (req, res) {
       }
     }
     
-    fs.readFile(filename, 'binary', function (err, file) {
+    fs.readFile(filename, 'binary', (err, file) => {
       if (err) {
         httpRespond(res, 500, err + '\n');
         return;
