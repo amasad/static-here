@@ -26,6 +26,6 @@
     "url": "http://amasad.github.com"
   },
   "dependencies": {
-    "mime": "~1.2.11"
+    "mime": "^2.4.6"
   }
 }

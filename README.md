@@ -1,6 +1,6 @@
-##static-here
-___________
-Create a static web server from the current directory.  
+## static-here
+
+A dead-simple static server for the current directory
 
 ### Install
 
@@ -8,11 +8,11 @@ Create a static web server from the current directory.
 
 ### Run
 
-  static-here
-    > Serving files from /badass/javascript/project at http://localhost:8888/
+    static-here
+    > Serving files from /home/me/project at http://localhost:8888/
     
 ### Options:
 
-  You can specify the port and hostname but defaults to:
+  You can specify the port and hostname in any order, however it defaults to:
   
-    static-here coffee 8888 0.0.0.0
+    static-here 8080 0.0.0.0
