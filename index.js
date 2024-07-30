@@ -30,6 +30,12 @@ function respond(res, code, txt, headers) {
 
 http.createServer((req, res) => {
   const { pathname } = url.parse(req.url);
+    if (path.normalize(decodeURI(pathname)) !== decodeURI(pathname)) {
+        res.statusCode = 403;
+        res.end();
+        return;
+    }
+    
   let filename = path.join(cwd, pathname);
 
   fs.stat(filename, (err, stats) => {
